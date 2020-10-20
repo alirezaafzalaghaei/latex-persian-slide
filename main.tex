@@ -1,0 +1,204 @@
+\include{assets/styles}
+
+\title{عنوان اسلاید}
+\author{نویسنده}
+\institute{نام دانشگاه}
+\date{تاریخ}
+\logo{\includegraphics[width=1.1cm]{assets/logo.png}}
+
+\begin{document}
+
+
+\begin{frame}[noframenumbering,plain]
+\includegraphics[width=7 cm]{assets/Besmellah.jpg}
+\begin{textblock*}{13cm}(0cm,9cm)
+\crule[white]{13cm}{1cm}
+\end{textblock*}
+\end{frame}
+
+
+
+\begin{frame}
+\maketitle
+\end{frame}
+\begin{frame}
+\frametitle{فهرست مطالب}
+\hfill
+\parbox[t]{.95\textwidth}{
+%\begin{minipage}[c][0.75\textheight]{\textwidth} % افزایش فاصله عمودی بین عنوان فصل ها
+{
+\setcounter{tocdepth}{1} 
+\tableofcontents
+}
+%\end{minipage}
+}
+\end{frame}
+
+
+
+\section{فصل اول}
+
+
+\begin{frame}
+\frametitle{عنوان اسلاید}
+\framesubtitle{زیر عنوان اسلاید}
+\begin{itemize}
+\setlength\itemsep{1em} % تنظیم فاصله عمودی بین آیتم ها
+\item آیتم اول
+\item آیتم دوم
+\item آیتم سوم
+\vspace{0.5em} % افزایش فاصله 
+\begin{itemize}
+\setlength\itemsep{1em}
+\item زیر آیتم اول
+\item زیر آیتم دوم
+\vspace{0.5em} % افزایش فاصله 
+\begin{itemize}
+\setlength\itemsep{1em}
+\item زیر زیر آیتم اول
+\item زیر زیر آیتم دوم
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+\subsection{زیر فصل اول}
+
+
+\begin{frame}
+\frametitle{اسلاید دوم}
+در اینجا یک متن برای تست و در زیر یک فرمول ریاضی
+\begin{equation*}
+a x + b = 0
+\end{equation*}
+قرار دارد.
+\end{frame}
+
+
+\begin{frame}
+\frametitle{اسلاید سوم}
+
+\begin{definition}[عنوان تعریف]
+متن تعریف
+\end{definition}
+
+\vspace{15pt} % فاصله عمودی
+
+\begin{theorem}[عنوان قضیه]
+متن قضیه
+\end{theorem}
+
+\begin{example}[شماره مثال]
+متن مثال
+\end{example}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{اسلاید چهارم}
+اسلاید دو ستونه
+\begin{columns}[T] 
+\begin{column}{.48\textwidth}
+\vspace{30pt}
+\begin{equation*}
+\Scale[0.85]{ % تغییر اندازه کل فرمول ها
+\begin{aligned}
+1+1=2
+\end{aligned}
+}
+\end{equation*}
+\end{column}
+\hfill
+\begin{column}{.48\textwidth}
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{assets/plot.jpg}
+\caption{نمودار یک}
+\end{figure}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{اسلاید پنجم}
+
+{\selectlanguage{nil}
+An English text.
+}
+\end{frame}
+
+
+\section{فصل دوم}
+
+\begin{frame}
+\frametitle{عنوان اسلاید}
+\begin{exampleblock}{}
+{
+یک جعبه برای نقل قول متن
+}
+\vskip5mm
+\hspace*\fill{\small--- اسم}
+\end{exampleblock}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{عنوان اسلاید}
+قرار دادن شکل در محل دلخواه
+\begin{textblock*}{3cm}(4cm,6cm) % {block width} (coords)
+\includegraphics[width=3cm]{assets/plot.jpg}
+\end{textblock*}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{رسم شکل}
+
+
+\begin{tikzpicture}
+
+\hskip-0.7cm
+
+\tikzset{vertex/.style = {shape=circle,draw,minimum size=1.5em}}
+\tikzset{edge/.style = {->,> = latex'}}
+
+
+\node[vertex] (A) at  (5,1.5) [text width=1cm,align=center] {A};
+\node[vertex] (B) at  (2,-3) [text width=1cm,align=center] {B};
+\node[vertex] (C) at  (8,-3) [text width=1cm,align=center] {C};
+
+\draw[->] (A) -- (C);
+\draw[->] (C) -- (A);
+\draw (A) -- (C)  node [midway, above, sloped] (TextNode) {A};
+\draw (A) -- (C)  node [midway, below, sloped] (TextNode) {C};
+
+
+
+\draw[->] (A) -- (B);
+\draw[->] (B) -- (A);
+\draw (A) -- (B)  node [midway, above, sloped] (TextNode) {A};
+\draw (A) -- (B)  node [midway, below, sloped] (TextNode) {B};
+
+\draw[->] (B) -- (C);
+\draw[->] (C) -- (B);
+\draw (B) -- (C)  node [midway, above, sloped] (TextNode) {BC};
+
+\end{tikzpicture}
+
+
+\end{frame}
+
+
+\begin{frame}
+  \begin{beamercolorbox}[sep=8pt,center,shadow=false,rounded=false]{palette secondary}
+پایان
+  \end{beamercolorbox}
+\end{frame}
+
+\end{document}
